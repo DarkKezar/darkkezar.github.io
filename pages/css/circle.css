@@ -1,0 +1,112 @@
+main{
+    width: 100%;
+    overflow: hidden;
+    background: #F5F5F5;
+    padding-top: 20vh;
+    padding-bottom: 5vh;
+}
+
+.content{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2vh 0;
+}
+.content-title{
+    font-weight: 800;
+    font-size: 2.5vw;
+    line-height: 3.1vw;
+    color: #303030;
+    text-align: center;
+    max-width: 80vw;
+}
+h1.content-title{
+    font-size: 4vw;
+    margin-bottom: 5vh;
+}
+.content-description{
+    display: inline-block;
+    width: auto;
+    padding: 1.2vw 2.8vw;
+    margin: 1.2vw auto;
+    background: #FFFFFF;
+    border-radius: 1.8vw;
+    max-width: 80vw;
+}
+.content-description p{
+    font-weight: 400;
+    font-size: 1.5vw;
+    line-height: 1.9vw;
+    text-align: center;
+    color: #303030;
+}
+
+
+
+.content-prises{
+    position: relative;
+    margin-top: 5vh;
+    width: 50vw;
+    height: 100vh;
+}
+#circle-bg{
+    position: absolute;
+    display: block;
+    width: 55vw;
+    height: 55vw;
+    background-image: url(img/prise-circle/circle-bg.webp);
+    background-size: cover;
+    background-position: center center;
+}
+#circle-bg::before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 5vw;
+    height: 8vw;
+    left: 25vw;
+    top: -2.5vw;
+    background-image: url(img/prise-circle/circle-detail.webp);
+    background-size: cover;
+    background-position: center center;
+    z-index: 50;
+}
+#circle-bg::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 5vw;
+    height: 5vw;
+    left: 25vw;
+    top: 25vw;
+    background-image: url(img/prise-circle/circle-center.webp);
+    background-size: cover;
+    background-position: center center;
+    z-index: 50;
+}
+#circle{
+    position: absolute;
+    display: block;
+    width: 50vw;
+    height: 50vw;
+    top: 2.5vw;
+    left: 2.5vw;
+    background-image: url(img/prise-circle/circle-info.webp);
+    background-size: cover;
+    background-position: center center;
+    -webkit-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+            transform: rotate(30deg);
+    z-index: 20;
+}
+

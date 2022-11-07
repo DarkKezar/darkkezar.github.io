@@ -1,0 +1,65 @@
+footer{
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2vw 5vw;
+    background: #161616;
+}
+footer p{
+    font-size: .95vw;
+    color: white !important;
+}
+footer p span{
+    font-weight: 700;
+    color: white !important;
+}
+.info p{ text-align: left; }
+.finanse p{ text-align: right; }
+
+.links{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.links a{
+    font-size: .95vw;
+    font-weight: 400;
+    color: white;
+    padding: 1vw;
+}
+
+@media (orientation: portrait){
+    footer{
+        text-align: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        padding: 2vw 5vw;
+    }
+    footer p{
+        font-size: 1.65vh;
+    }
+    .info { margin: 5vh; }
+    .finanse { margin: 5vh; }
+    .info p{ text-align: center; }
+    .finanse p{ text-align: center; }
+    .links a{
+        font-size: 1.65vh;
+        padding: 1vw;
+    }
+}
