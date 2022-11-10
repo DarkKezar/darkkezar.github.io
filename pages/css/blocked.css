@@ -414,7 +414,8 @@ h1.content-title{
     }
     
     .content{
-        padding: 10vw 0;
+        padding: 0vw 0;
+        margin-bottom: 5vw;
     }
     .content-title{
         font-size: max(2.5vh, 2.5vw);
@@ -463,7 +464,7 @@ h1.content-title{
     }
     .date-message{
         max-width: 90vw;
-        padding: .6vh .1vh .6vh 4vh;
+        padding: .6vh 3vh .6vh 4vh;
         border: .1vh solid rgba(255, 255, 255, 0.4);
         border-radius: 2vh;
     }
@@ -568,6 +569,7 @@ h1.content-title{
     }
     
     .benefict p{
+        max-width: 40vw;
         font-size: 1.6vh;
         line-height: 2vh;
     }

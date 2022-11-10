@@ -411,12 +411,13 @@ h1.content-title{
 
 @media (orientation: portrait) {
     main{
-        padding-top: 2vh;
+        padding-top: 0vh;
         padding-bottom: 2vh;
     }
     
     .content{
-        padding: 10vw 0;
+        padding: 0 0;
+        margin-bottom: 5vw;
     }
     .content-title{
         font-size: max(2.5vh, 2.5vw);
@@ -442,7 +443,7 @@ h1.content-title{
     }
     
     .content-screen{
-        margin-top: 15vh;
+        margin: 5vh 0;
         height: auto;
     }
     .left-zone{
@@ -483,13 +484,13 @@ h1.content-title{
     #date-cover{
         position: absolute;
         width: auto;
-        height: 80%;
-        bottom: 0; right: -20%;
+        height: 40vh;
+        bottom: -5vw; right: -10vw;
         z-index: -1;
     }
     
     .appeal{
-        width: 70vw;
+        width: 60vw;
         height: auto;
         border: .1vh solid rgba(255, 255, 255, 0.4);
         border-radius: 0 2vh 2vh 2vh;
@@ -513,7 +514,7 @@ h1.content-title{
         margin: .5vh 0;
     }
     .button-section{
-        width: 70vw;
+        width: 60vw;
         margin: 2vh 0;
     }
     .button-section .content-more{
@@ -527,15 +528,17 @@ h1.content-title{
         height: 4.7vh;
         font-size: 2.9vh;
         line-height: 2vh;
+        background: white;
         border: .1vh solid rgba(255, 255, 255, 0.4);
         border-radius: 1.5vh;
     }
     .prise-message{
-        width: 67vw;
+        width: 70vw;
         padding: 1.5vh 0 1.5vh 9vh;
         font-size: 1.3vh;
         line-height: 1.6vh;
     }
+
     .prise-message::before{
         width: 7vh;
         height: 7.5vh;
@@ -569,6 +572,7 @@ h1.content-title{
     }
     
     .benefict p{
+        max-width: 40vw;
         font-size: 1.6vh;
         line-height: 2vh;
     }
@@ -586,6 +590,6 @@ h1.content-title{
     }
     
     .feedback img{
-        width: 80vw;
+        width: 60vw;
     }
 }

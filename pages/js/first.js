@@ -28,6 +28,7 @@ let currentY = 12.5; let speedY = 1; let startY = 12.5; let finishY = 18.5;
 let isMarioPlayedTop = false;
 let isMarioPlayedBottom = true;
 let jump = true;
+let lastFrameTime = 0;
 
 window.addEventListener('scroll', function() {
     text1.style.transform = "translateX(" + Math.round(this.window.scrollY * 0.5) + "px)";
@@ -119,13 +120,19 @@ window.addEventListener('scroll', function() {
         }
     }
    
-    
+    let currentTime = Date.now();
+    if(currentTime - lastFrameTime >= 33){
+        mario_run.src = mario_run_src[i_run]; i_run++;
+        mario_jmp.src = mario_jmp_src[i_jmp]; i_jmp++;
+        if(i_run == 8) i_run = 0;
+        if(i_jmp == 7) i_jmp = 0;
+
+        lastFrameTime = currentTime;
+    }
 
     last_position = this.window.scrollY;
 });
+/*
 setInterval(() => {
-    mario_run.src = mario_run_src[i_run]; i_run++;
-    mario_jmp.src = mario_jmp_src[i_jmp]; i_jmp++;
-    if(i_run == 8) i_run = 0;
-    if(i_jmp == 7) i_jmp = 0;
-}, 66);
+    
+}, 66);*/
