@@ -74,7 +74,7 @@
 }
 .social .first_layer,
 .social .second_layer{
-    width: 80%;
+    width: 80vw;
     margin: auto;
     display: -webkit-box;
     display: -ms-flexbox;

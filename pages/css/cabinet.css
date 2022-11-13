@@ -1,0 +1,184 @@
+main{
+    width: 100%;
+    overflow: hidden;
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+    background: #F5F5F5;
+}
+
+
+
+.content-title{
+    font-weight: 900;
+    font-size: max(3.2vw, 3.2vh);
+    line-height: max(4.1vw, 4.1vh);
+    color: black;
+    text-align: center;
+    max-width: 50vw;
+    margin: auto;
+    z-index: 2000;
+}
+.content{
+    z-index: 2000;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    margin: auto;
+    z-index: 2000;
+    margin-top: 2vw;
+}
+.lost{
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 40%;
+    padding: 2.6vw 0;
+    background: rgba(255, 255, 255, 0.2);
+    border: .3px solid rgba(255, 255, 255, 0.4);
+    -webkit-box-shadow: 0px 0px 64px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 0px 64px rgba(0, 0, 0, 0.15);
+    -webkit-backdrop-filter: blur(52px);
+            backdrop-filter: blur(52px);
+    border-radius: 1.6vw;
+    z-index: 200;
+    margin-bottom: 5vw;
+}
+.lost h2{
+    font-size: max(2.3vw, 2.3vh);
+    margin-bottom: 2.3vw;
+}
+.lost p{
+    font-weight: 400;
+    font-size: max(1.7vw, 1.7vh);
+    line-height: max(2vw, 2vh);
+    text-align: center;
+}
+.lost a{
+    width: 60%;
+    display: block;
+    background: #6CC34D;
+    font-weight: 700;
+    font-size: max(1.2vw, 1.2vh);
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding: 1.9vw 0.2vw;
+    margin-top: 4vw;
+    border-radius: 5vw;
+    -webkit-box-shadow: 0 0 20px 5px rgba(108, 195, 77, .4);
+            box-shadow: 0 0 20px 5px rgba(108, 195, 77, .4);
+    font-weight: 600;
+}
+
+.goods{
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    padding: 2.6vw 0;
+    background: rgba(255, 255, 255, 0.2);
+    border: .3px solid rgba(255, 255, 255, 0.4);
+    -webkit-box-shadow: 0px 0px 64px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 0px 64px rgba(0, 0, 0, 0.15);
+    -webkit-backdrop-filter: blur(52px);
+            backdrop-filter: blur(52px);
+    border-radius: 1.6vw;
+    z-index: 200;
+}
+.goods h2{
+    font-size: max(2.3vw, 2.3vh);
+    margin-bottom: 2.3vw;
+}
+table{
+    width: 90%;
+}
+tr:nth-child(odd) {
+    background: none;
+}
+tr:nth-child(even) {
+    background: rgba(107, 194, 76, .5);;
+}
+
+tr:first-child td { font-weight: 800; border-bottom: .1vw solid #303030;}
+td{
+    font-weight: 400;
+    font-size: max(1.2vw, 1.2vh);
+    padding: .5vw;
+    text-align: center;
+}
+td.red {
+    color: red;
+}
+
+
+.cover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    z-index: 0;
+}
+.cover img{
+    position: absolute;
+    z-index: 1;
+}
+.cover h2{
+    position: absolute;
+    font-size: min(20vw, 20vh);
+    color: #F5F5F5;
+    -webkit-text-stroke: 2px #6BC24C;
+    font-weight: 900;
+}
+.off{
+    text-align: center;
+    font-weight: 400;
+    font-size: max(1.2vw, 1.2vh);
+    line-height: max(1.6vw, 1.6vh);
+    color: #303030;
+    margin: 1vw auto;
+}
+
+#cover-surname{ top: 30vh; left: -0vw; }
+#cover-name{ top: 45vh; right: 5vw; }
+#scene1-obj1{ top: 10vh; left: 5vw;  z-index: 2;}
+#scene1-obj2{ top: 80vh; left: 0vw; }
+#scene1-obj3{ bottom: 15vh; left: 95vw; }
+
+@media (orientation: portrait) {
+    main{
+        padding-top: 10vh;
+        padding-bottom: 5vh;
+    }
+    .content-title{ max-width: 80vw;}
+    .lost{
+        width: 80%;
+    }
+ 
+    #scene1-obj1{ top: 10vh; left: -5vw;  width: 10vw;}
+
+}

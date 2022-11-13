@@ -21,7 +21,7 @@ article { position: relative; }
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 5vw 0;
+    padding: 2vw 0;
     z-index: 2;
 }
 .content-title{
@@ -249,6 +249,7 @@ h1.content-title{
 
 }*/
 .offer-buy-action{
+    margin: auto;
     font-weight: 700;
     font-size: 1.3vw;
     line-height: 1.6vw;

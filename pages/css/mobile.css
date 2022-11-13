@@ -1,6 +1,6 @@
 
 @media (orientation: portrait) {
-    main{ padding-top: 0vh; }
+    main{ padding-top: 0vh; padding-bottom: 20vh;}
     article{ height: 70vh; }
     #first_screen{
         position: relative;
@@ -273,10 +273,10 @@
     #prise-1{ width: 15vh; z-index: -1; top: -0vh; left: -5vw; }
     #prise-3{ width: 20vh; z-index: -1; bottom: -5vw; left: -10vw; }
 
-    #sc1{ width: 40vw; top: -8vw; left: -10%; }
-    #sc2{ width: 30vw; top: -2vw; left: 35%; }
-    #sc3{ width: 40vw; bottom: 20vw; left: 0%; }
-    #sc4{ width: 30vw; bottom: 20vw; left: 25%; }
+    #sc1{ width: 70vw; top: -18vw; left: -12vw; }
+    #sc2{ width: 40vw; top: -5vw; left: 35%; }
+    #sc3{ width: 60vw; bottom: 20vw; left: -10vw; }
+    #sc4{ width: 70vw; bottom: 20vw; left: -5vw; }
 
     #sc2obj2{  z-index: 10; bottom: -7vh; right: 10%;  width: 15vh;}
     #sc2obj3{  z-index: 10; bottom: -6vh; left: -2%;  width: 5vh;}

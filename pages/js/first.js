@@ -21,6 +21,7 @@ const mario_run_src = [ "img/mario/mario_run/1.webp", "img/mario/mario_run/2.web
 const mario_jmp_src = [ "img/mario/mario_jump/1.webp", "img/mario/mario_jump/2.webp", "img/mario/mario_jump/3.webp", "img/mario/mario_jump/4.webp", "img/mario/mario_jump/5.webp", "img/mario/mario_jump/6.webp", "img/mario/mario_jump/7.webp"];
 
 let i_run = 1, i_jmp = 1;
+let cofY = 1.2;
 let isMarioOn = true;
 let last_position = 0;
 let currentX = 35; let speedX = 1; let startX = 35; let finishX = 100;
@@ -51,7 +52,7 @@ window.addEventListener('scroll', function() {
                     mario_run.classList.remove("active");
                     mario_jmp.classList.add("active");
         
-                    if(currentY < finishY && jump){
+                    if(currentY <= finishY * cofY && jump){
                         currentY += speedY;
                         mario_jmp.style.bottom = currentY + "vw";
                     } else if(currentY > startY){
@@ -84,7 +85,7 @@ window.addEventListener('scroll', function() {
                         mario_run.classList.remove("active");
                         mario_jmp.classList.add("active");
             
-                        if(currentY < finishY && !jump){
+                        if(currentY < finishY * cofY && !jump){
                             currentY += speedY;
                             mario_jmp.style.bottom = currentY + "vh";
                         } else if(currentY > startY){
@@ -132,7 +133,19 @@ window.addEventListener('scroll', function() {
 
     last_position = this.window.scrollY;
 });
-/*
-setInterval(() => {
-    
-}, 66);*/
+window.addEventListener("load", () => {
+    let mql = window.matchMedia("(orientation: portrait)");
+    if(!mql.matches){
+        cofY = 2;
+    }else{
+        cofY = 1.2
+    }
+});
+window.addEventListener("resize", () => {
+    let mql = window.matchMedia("(orientation: portrait)");
+    if(!mql.matches){
+        cofY = 2;
+    }else{
+        cofY = 1.2
+    }
+});
