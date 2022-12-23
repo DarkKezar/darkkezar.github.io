@@ -10,6 +10,46 @@ body{
 /* temp */
 
 
+#top{
+    position: fixed;
+    top: calc(50vh - min(2.5vw, 2.5vh));
+    left: min(-15vw, -15vh);
+    -webkit-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+
+    
+    width: max(5vw, 5vh);
+    height: max(5vw, 5vh);
+    
+    display: -webkit-box;
+    
+    display: -ms-flexbox;
+    
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+    
+    background: none;
+    border: 5px solid white;
+    border-radius: 100%;
+    cursor: pointer;
+    z-index: 1000 !important;
+}
+#top span{
+    height: max(5.5vw, 5.5vh);
+    font-size: max(4vw, 4vh);
+    font-weight: bolder;
+}
+#top.active{
+    left: min(5vw, 5vh);
+}
+
 .bg{
     width: 100%;
 }
