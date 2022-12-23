@@ -169,10 +169,10 @@ article{
     width: 100%; height: 100%;
 }
 .prise{ position: absolute; }
-
-.fortune-circle-obj{
-    width: 40vw;
+.fortune-circle{
+    scale: .8;
 }
+
 
 #third_screen{
     position: relative;
@@ -372,6 +372,7 @@ article{
     -webkit-box-pack: center; 
         -ms-flex-pack: center; 
             justify-content: center; 
+    
     -webkit-box-orient: vertical; 
     -webkit-box-direction: normal; 
         -ms-flex-direction: column; 
@@ -381,18 +382,22 @@ article{
             align-items: center;
 }
 .video_tape, .tab_tape, .feedback_tape{
-    width: 80%;
+    width: 80vw;
     margin: auto;
+    
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
     margin: 2vh auto;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
     z-index: 1000;
     margin: 10vh 0;
 
@@ -400,8 +405,9 @@ article{
 .tab {display: none;}
 
 .video_card, .casse_card, .feedback_card{
-    display: none;
-    width: 30%;
+    position: absolute;
+    /*transform: translate(-200vw, 0);*/
+    width: 24vw !important;
     background: rgba(255, 255, 255, .4);
     border: 5px solid rgba(255, 255, 255, 0.4);
     border-radius: 2vw;
@@ -411,14 +417,18 @@ article{
             backdrop-filter: blur(17px);
     -webkit-box-shadow: 0px 0px 64px rgba(0, 0, 0, 0.15);
             box-shadow: 0px 0px 64px rgba(0, 0, 0, 0.15);
+    transition: .9s;
 }
+.feedback_card.active, .video_card.active, .casse_card.active{ 
+    position: relative;
+ }
 .feedback_card img { width: 30vw; -o-object-fit: cover; object-fit: cover; object-position: center center;}
 .video_info, .casse_info{  padding: 2vw 2vw; }
 .casse_info{ padding-top: 0;}
 .casse_tags{ font-weight: 600; font-size: .8vw; margin: 1.2vw 0;}
 .video_title, .casse_title { font-size: 1.2vw; margin-bottom: 1.2vw; font-weight: 700; }
 .video_description, .casse_description { font-size: .8vw; font-weight: 400; text-overflow: ellipsis;}
-.feedback_card.active, .video_card.active, .casse_card.active{ display: block; }
+
 .video_cover, .casse_cover{ width: 100%; -o-object-fit: cover; object-fit: cover; }
 .videos_nav, .casses_nav, .feedback_nav{ 
     text-align: center; 
@@ -464,9 +474,9 @@ article{
 #line1{ width: 100px; height: 8px; left: -20%; top: 70vh; }
 #line2{ width: 400px; height: 2px; left: 75vw; top: 25vh; }
 
-#prise-1{ width: 15vw; z-index: -1; top: 5%; left: -10%; transform: rotate(-20deg);}
-#prise-2{ width: 15vw; bottom: 5%; right: -10%; }
-#prise-3{ width: 25vw; z-index: -1; bottom: 0%; left: -25%; }
+#prise-1{ width: 15vw; z-index: -1; top: 15%; left: -5%; transform: rotate(-20deg);}
+#prise-2{ width: 15vw; bottom: 15%; right: 0%; }
+#prise-3{ width: 25vw; z-index: -1; bottom: 10%; left: -15%; }
 
 #sc1{ width: 40vw; top: 0%; left: -10%; }
 #sc2{ width: 30vw; top: 12%; left: 35%; }
@@ -543,6 +553,15 @@ article{
     position: absolute;
     display: none; 
     width: 12vw;
-    z-index: 500; 
 }
 .mario_obj.active {display: block;}
+.mario_full{
+    position: absolute;
+    width: 70vw;
+    bottom: 8vw;
+    right: -10vw;
+    display: none;
+    z-index: 500; 
+
+}
+.mario_full.active { display: block; }

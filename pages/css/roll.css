@@ -89,53 +89,7 @@ h1.content-title{
     color: #6CC34D;
 }
 .content-deal a { color: #6CC34D; }
-#circle-bg{
-    position: absolute;
-    display: block;
-    width: 55vw;
-    height: 55vw;
-    background-image: url(../img/prise-circle/circle-bg.webp);
-    background-size: cover;
-    background-position: center center;
-}
-#circle-bg::before{
-    content: '';
-    position: absolute;
-    display: block;
-    width: 5vw;
-    height: 8vw;
-    left: 25vw;
-    top: -2.5vw;
-    background-image: url(../img/prise-circle/circle-detail.webp);
-    background-size: cover;
-    background-position: center center;
-    z-index: 50;
-}
-#circle-bg::after{
-    content: '';
-    position: absolute;
-    display: block;
-    width: 5vw;
-    height: 5vw;
-    left: 25vw;
-    top: 25vw;
-    background-image: url(../img/prise-circle/circle-center.webp);
-    background-size: cover;
-    background-position: center center;
-    z-index: 50;
-}
-#circle{
-    position: absolute;
-    display: block;
-    width: 50vw;
-    height: 50vw;
-    top: 2.5vw;
-    left: 2.5vw;
-    background-image: url(../img/prise-circle/circle-info.webp);
-    background-size: cover;
-    background-position: center center;
-    z-index: 20;
-}
+
 .midlle-line::before{
     position: absolute;
     content: '';
@@ -322,12 +276,7 @@ h1.content-title{
         border-radius: 3.5vh;
         padding: 2.2vh 4.5vh;
     }
-    .content-prises{
-        position: relative;
-        margin: 5vh 0;
-        width: 75vw;
-        height: 75vw;
-    }
+    
     .content-deal{
         margin-top: 4vh;
         max-width: 90vw;
@@ -336,28 +285,7 @@ h1.content-title{
         
         color: #6CC34D;
     }
-    #circle-bg{
-        width: 75vw;
-        height: 75vw;
-    }
-    #circle-bg::before{
-        width: 7.5vw;
-        height: 12vw;
-        left: 33.5vw;
-        top: -5.5vw;
-    }
-    #circle-bg::after{
-        width: 7.5vw;
-        height: 7.5vw;
-        left: 33.5vw;
-        top: 33.5vw;
-    }
-    #circle{
-        width: 70vw;
-        height: 70vw;
-        top: 2.5vw;
-        left: 2.5vw;
-    }
+    
     .midlle-line::before{
         position: absolute;
         content: '';

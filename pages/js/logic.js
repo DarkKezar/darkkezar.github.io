@@ -38,12 +38,19 @@ let countPage = 2;
 let countItems = 6;
 
 const VShow = function(){
-    for(let i = 0; i < vcards.length; i++) 
-        vcards[i].classList.remove("active");
+    
     let items = (countItems / countPage);
     let StartPosition = (vpage - 1) * items;
-    for(let i = StartPosition; i < StartPosition + items; i++)
+    for(let i = 0; i < vcards.length; i++) {
+        vcards[i].classList.remove("active");
+        if(i < StartPosition) vcards[i].style.transform = "translateX(-100vw)";
+        else if(i >= StartPosition + items) vcards[i].style.transform = "translateX(100vw)";
+    }
+    for(let i = StartPosition; i < StartPosition + items; i++){
         vcards[i].classList.add("active");
+        vcards[i].style.transform = "none";
+    }
+
     if(vpage == 1) vb1.classList.remove("active");
     else vb1.classList.add("active");
 
@@ -52,12 +59,18 @@ const VShow = function(){
 }
 
 const CShow = function(){
-    for(let i = 0; i < ccards.length; i++) 
-        ccards[i].classList.remove("active");
     let items = (countItems / countPage);
     let StartPosition = (cpage - 1) * items;
-    for(let i = StartPosition; i < StartPosition + items; i++)
+    for(let i = 0; i < ccards.length; i++) {
+        ccards[i].classList.remove("active");
+        if(i < StartPosition) ccards[i].style.transform = "translateX(-100vw)";
+        else if(i >= StartPosition + items) ccards[i].style.transform = "translateX(100vw)";
+    }
+    for(let i = StartPosition; i < StartPosition + items; i++){
         ccards[i].classList.add("active");
+        ccards[i].style.transform = "none";
+    }
+        
     if(cpage == 1) cb1.classList.remove("active");
     else cb1.classList.add("active");
 
@@ -66,12 +79,18 @@ const CShow = function(){
 }
 
 const FShow = function(){
-    for(let i = 0; i < fcards.length; i++) 
-        fcards[i].classList.remove("active");
     let items = (countItems / countPage);
     let StartPosition = (fpage - 1) * items;
-    for(let i = StartPosition; i < StartPosition + items; i++)
+    for(let i = 0; i < fcards.length; i++) {
+        fcards[i].classList.remove("active");
+        if(i < StartPosition) fcards[i].style.transform = "translateX(-100vw)";
+        else if(i >= StartPosition + items) fcards[i].style.transform = "translateX(100vw)";
+    }
+    
+    for(let i = StartPosition; i < StartPosition + items; i++){
         fcards[i].classList.add("active");
+        fcards[i].style.transform = "none";
+    }
     if(fpage == 1) fb1.classList.remove("active");
     else fb1.classList.add("active");
 

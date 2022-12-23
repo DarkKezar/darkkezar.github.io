@@ -10,7 +10,63 @@ let screen4 = document.getElementById("fourth_screen");
 
 let coin_ctr_1 = document.getElementById("coint_ctr_1");
 let coin_ctr_2 = document.getElementById("coint_ctr_2");
-let coin_ctr_3 = document.getElementById("coint_ctr_3");	
+let coin_ctr_3 = document.getElementById("coint_ctr_3");
+let circle = document.getElementById("circle");
+
+
+let mario = document.getElementsByClassName('mario_full');
+let cofY = 1;
+//let currentFrame = 0;
+
+window.addEventListener('scroll', function() {
+    text1.style.transform = "translateX(" + Math.round(this.window.scrollY * 0.5) + "px)";
+    text2.style.transform = "translateX(-" + Math.round(this.window.scrollY * 0.5) + "px)";
+
+    circle.style.transform = "rotate(" + (Math.round(this.window.scrollY * 0.5) + 190) + "deg)";
+
+    if(this.window.scrollY >  screen2.clientHeight + screen3.clientHeight * 0.6 &&
+        this.window.scrollY <  screen2.clientHeight + screen3.clientHeight + screen4.clientHeight){
+
+        coin_ctr_1.style.transform = "translateY(" + (this.window.scrollY - (screen2.clientHeight + screen3.clientHeight * 0.6)) * 1.25 + "px)";
+        coin_ctr_2.style.transform = "translateY(" + (this.window.scrollY - (screen2.clientHeight + screen3.clientHeight * 0.6)) * 1.15 + "px)";
+        coin_ctr_3.style.transform = "translateY(" + (this.window.scrollY - (screen2.clientHeight + screen3.clientHeight * 0.6)) * 1.05 + "px)";
+    }
+
+    for(let i = 0; i < mario.length; i++){
+        if(i == 
+            Math.round(
+                (this.window.scrollY - screen1.clientHeight - screen2.clientHeight - screen3.clientHeight * cofY ) / (screen4.clientHeight / 40)
+            % mario.length))
+            mario[i].classList.add('active');
+        else mario[i].classList.remove('active');
+        if(this.window.scrollY > screen1.clientHeight + screen2.clientHeight + screen3.clientHeight + screen4.clientHeight * (cofY - .4)){
+            mario[i].classList.remove('active');
+            mario[mario.length - 1].classList.add('active');
+        } 
+    }
+    if(this.window.scrollY - screen1.clientHeight - screen2.clientHeight - screen3.clientHeight * cofY < 0) mario[0].classList.add('active');
+
+});
+
+window.addEventListener("load", () => {
+    let mql = window.matchMedia("(orientation: portrait)");
+    if(!mql.matches){
+        cofY = 1;
+    }else{
+        cofY = 0;
+    }
+});
+window.addEventListener("resize", () => {
+    let mql = window.matchMedia("(orientation: portrait)");
+    if(!mql.matches){
+        cofY = 1;
+    }else{
+        cofY = 0;
+    }
+});
+
+/*
+	
 
 let mario_run = document.getElementById("mario_run");
 let mario_jmp = document.getElementById("mario_jmp");
@@ -133,19 +189,6 @@ window.addEventListener('scroll', function() {
 
     last_position = this.window.scrollY;
 });
-window.addEventListener("load", () => {
-    let mql = window.matchMedia("(orientation: portrait)");
-    if(!mql.matches){
-        cofY = 2;
-    }else{
-        cofY = 1.2
-    }
-});
-window.addEventListener("resize", () => {
-    let mql = window.matchMedia("(orientation: portrait)");
-    if(!mql.matches){
-        cofY = 2;
-    }else{
-        cofY = 1.2
-    }
-});
+
+
+*/
