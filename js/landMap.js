@@ -43,13 +43,18 @@ for(let i = 0; i < 12; i++){
 }
 
 let questions = document.getElementsByClassName('question');
+let queButton = document.getElementsByClassName('question-title-button');
 let answers = document.getElementsByClassName('question-answer');
 
 for(let i = 0; i < questions.length; i++){
     questions[i].addEventListener('click', () => {
-        if(answers[i].classList.contains('active'))
+        if(answers[i].classList.contains('active')){
             answers[i].classList.remove('active');
-        else
-            answers[i].classList.add('active');    
+            queButton[i].classList.remove('active');
+        }
+        else{
+            answers[i].classList.add('active');  
+            queButton[i].classList.add('active');
+        } 
     })
 }

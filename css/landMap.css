@@ -101,9 +101,6 @@ nav button.active, nav button:hover{
     position: relative;
     overflow: hidden;
     max-height: 0;
-    -webkit-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
 }
 .prof_view.active{
     max-height: 5000vh;
@@ -193,7 +190,9 @@ nav button.active, nav button:hover{
 .prof_view section:nth-child(2) .question-title-button::after,
 .prof_view section:nth-child(2) .question-title-button::before,
 .prof_view section:nth-child(11) .question-title-button::after,
-.prof_view section:nth-child(11) .question-title-button::before{
+.prof_view section:nth-child(11) .question-title-button::before,
+.prof_view section:nth-child(2) .question-answer p::before,
+.prof_view section:nth-child(11) .question-answer p::before{
     background: #00A3FF;
 }
 
@@ -204,7 +203,9 @@ nav button.active, nav button:hover{
 .prof_view section:nth-child(3) .question-title-button::after,
 .prof_view section:nth-child(3) .question-title-button::before,
 .prof_view section:nth-child(12) .question-title-button::after,
-.prof_view section:nth-child(12) .question-title-button::before{
+.prof_view section:nth-child(12) .question-title-button::before,
+.prof_view section:nth-child(3) .question-answer p::before,
+.prof_view section:nth-child(12) .question-answer p::before{
     background: #FFD600;
 }
 
@@ -215,7 +216,9 @@ nav button.active, nav button:hover{
 .prof_view section:nth-child(4) .question-title-button::after,
 .prof_view section:nth-child(4) .question-title-button::before,
 .prof_view section:nth-child(13) .question-title-button::after,
-.prof_view section:nth-child(13) .question-title-button::before{
+.prof_view section:nth-child(13) .question-title-button::before,
+.prof_view section:nth-child(4) .question-answer p::before,
+.prof_view section:nth-child(13) .question-answer p::before{
     background: #00FF94;
 }
 
@@ -226,7 +229,9 @@ nav button.active, nav button:hover{
 .prof_view section:nth-child(5) .question-title-button::after,
 .prof_view section:nth-child(5) .question-title-button::before,
 .prof_view section:nth-child(14) .question-title-button::after,
-.prof_view section:nth-child(14) .question-title-button::before{
+.prof_view section:nth-child(14) .question-title-button::before,
+.prof_view section:nth-child(5) .question-answer p::before,
+.prof_view section:nth-child(14) .question-answer p::before{
     background: #24B639;
 }
 
@@ -237,7 +242,9 @@ nav button.active, nav button:hover{
 .prof_view section:nth-child(6) .question-title-button::after,
 .prof_view section:nth-child(6) .question-title-button::before,
 .prof_view section:nth-child(15) .question-title-button::after,
-.prof_view section:nth-child(15) .question-title-button::before{
+.prof_view section:nth-child(15) .question-title-button::before,
+.prof_view section:nth-child(6) .question-answer p::before,
+.prof_view section:nth-child(15) .question-answer p::before{
     background: #FF8A00;
 }
 
@@ -248,7 +255,9 @@ nav button.active, nav button:hover{
 .prof_view section:nth-child(7) .question-title-button::after,
 .prof_view section:nth-child(7) .question-title-button::before,
 .prof_view section:nth-child(16) .question-title-button::after,
-.prof_view section:nth-child(16) .question-title-button::before{
+.prof_view section:nth-child(16) .question-title-button::before,
+.prof_view section:nth-child(7) .question-answer p::before,
+.prof_view section:nth-child(16) .question-answer p::before{
     background: #FF3D00;
 }
 
@@ -259,7 +268,9 @@ nav button.active, nav button:hover{
 .prof_view section:nth-child(8) .question-title-button::after,
 .prof_view section:nth-child(8) .question-title-button::before,
 .prof_view section:nth-child(17) .question-title-button::after,
-.prof_view section:nth-child(17) .question-title-button::before{
+.prof_view section:nth-child(17) .question-title-button::before,
+.prof_view section:nth-child(8) .question-answer p::before,
+.prof_view section:nth-child(17) .question-answer p::before{
     background: #BDFF00;
 }
 
@@ -270,7 +281,9 @@ nav button.active, nav button:hover{
 .prof_view section:nth-child(9) .question-title-button::after,
 .prof_view section:nth-child(9) .question-title-button::before,
 .prof_view section:nth-child(18) .question-title-button::after,
-.prof_view section:nth-child(18) .question-title-button::before{
+.prof_view section:nth-child(18) .question-title-button::before,
+.prof_view section:nth-child(9) .question-answer p::before,
+.prof_view section:nth-child(18) .question-answer p::before{
     background: #EB00FF;
 }
 
@@ -281,7 +294,9 @@ nav button.active, nav button:hover{
 .prof_view section:nth-child(10) .question-title-button::after,
 .prof_view section:nth-child(10) .question-title-button::before,
 .prof_view section:nth-child(19) .question-title-button::after,
-.prof_view section:nth-child(19) .question-title-button::before{
+.prof_view section:nth-child(19) .question-title-button::before,
+.prof_view section:nth-child(10) .question-answer p::before,
+.prof_view section:nth-child(19) .question-answer p::before{
     background: #9E00FF;
 }
 

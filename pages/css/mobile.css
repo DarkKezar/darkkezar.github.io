@@ -1,4 +1,3 @@
-
 @media (orientation: portrait) {
     main{ padding-top: 0vh; padding-bottom: 20vh;}
     article{ height: 70vh; }
@@ -50,15 +49,12 @@
         right: -6px;
     }
     .appeal h2{
-        font-size: 1.8vh;
     }
     .appeal p{
-        font-size: 1.2vh;
         padding: 1.2vh 0;
     }
 
     .appeal a{
-        font-size: 1.2vh;
         margin-top: 2vh;
     }
     
@@ -112,7 +108,6 @@
     }
     .left_appeal li{
         font-weight: 400;
-        font-size: 1.2vh;
         margin: 0px 2.5vh;
     }
     .left_appeal a { margin-top: 2vh; }
@@ -137,10 +132,13 @@
         height: 60vh;
         padding-top: 0vh;
     }
-    #third_screen .appeal { max-width: 40vw;}
+    #third_screen .appeal { max-width: 65vw;}
 
     .screenshots{
         height: 30vh;
+		-webkit-transform: translateX(0vw);
+		-ms-transform: translateX(0vw);
+		transform: translateX(0vw);
     }
     .screenshots h2{
         font-size: 2.0vh;
@@ -161,7 +159,7 @@
         position: absolute;
         top: 0; left: 0;
     }
-    #fourth_screen .content .appeal { max-width: 45vw;}
+    #fourth_screen .content .appeal { max-width: 55vw;}
     #fourth_screen .content ul { margin: 2vh 0; }
     #fourth_screen p, #fourth_screen h2, #fourth_screen li{
         color: white;
@@ -180,10 +178,8 @@
         height: 100%;
         width: 100%;
     }
-    #sixth_screen, #seventh_screen { 
-        margin: 15vh 0;
-    }
-    #sixth_screen { margin-top: 5vh;}
+
+    #sixth_screen { }
     
     .headline{
         max-width: 90vw;
@@ -223,6 +219,7 @@
     #fifth_screen .focus .promo{
         position: absolute;
         height: 55vh;
+		width: auto;
         bottom: 0; left: -15vh;
         -webkit-transform: translateY(0vh);
             -ms-transform: translateY(0vh);
@@ -230,7 +227,7 @@
     }
 
     .video_tape, .tab_tape, .feedback_tape{
-        width: 80%;
+        width: 90vw;
         margin: 2vh auto;
     }
     .tab {display: none;}
@@ -238,12 +235,16 @@
     .video_card, .casse_card, .feedback_card{
         border: 1px solid rgba(255, 255, 255, 0.4);
     }
-    .casse_card, .feedback_card, .video_card { width: 40vw; height: auto;  margin: 0 1vw;}
+    .casse_card, .feedback_card, .video_card { width: 45vw; height: auto;  margin: 0 1vw;}
     .video_info, .casse_info {  padding: 2vw 2vw; }
-    .casse_info {height: 18vh;}
-    .casse_tags{ font-size: .8vh; }
-    .video_title, .casse_title { font-size: 1.2vh; margin-bottom: 1.2vh; font-weight: 700; }
-    .video_description, .casse_description { font-size: .8vh; font-weight: 400; }
+    .casse_info {height: auto;}
+    .casse_card iframe, .casse_card img, .video_card iframe, .video_card img {
+        width: 45vw;
+    	height: 25.313vw;
+        -o-object-fit: cover;
+        object-fit: cover;
+        border-radius: 1.6vw 1.6vw 0 0;
+    }
     .video_card.active, .casse_card.active{ display: block; }
     .video_cover, .casse_cover{ width: 100%; -o-object-fit: cover; object-fit: cover; }
     .videos_nav, .casses_nav, .feedback_nav{ 
@@ -255,7 +256,7 @@
         width: 5vh; height: 5vh;
         font-size: 2vh;
     }
-    #sixth_screen, #seventh_screen { position: relative; height: 40vh; ;}
+    #sixth_screen, #seventh_screen { position: relative; height: auto; }
     .videos_nav button.active, .casses_nav button.active, .feedback_nav button.active{ color: white; background: #6CC34D; cursor: pointer;}
     
     .headline{
@@ -350,5 +351,5 @@
         display: none; 
         z-index: 500; 
     }
-    .mario_obj.active {display: block;}
+	.mario_full { bottom: 12%; }
 }

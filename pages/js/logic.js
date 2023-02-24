@@ -19,8 +19,6 @@ ccb2.addEventListener('click', () => {
     tab1.classList.remove("active");
 });
 
-
-
 let vb1 = document.getElementById("videos_but_1");
 let vb2 = document.getElementById("videos_but_2");
 let cb1 = document.getElementById("casses_but_1");
@@ -31,99 +29,89 @@ let vcards = document.getElementsByClassName("video_card");
 let ccards = document.getElementsByClassName("casse_card");
 let fcards = document.getElementsByClassName("feedback_card");
 
-let vpage = 1,
-    cpage = 1,
-    fpage = 1;
-let countPage = 2;
-let countItems = 6;
+
+let countOnPage = 3;
+let vcur = 0;
+let ccur = 0;
+let fcur = 0;
+let curW = 28.5;
 
 const VShow = function(){
-    
-    let items = (countItems / countPage);
-    let StartPosition = (vpage - 1) * items;
-    for(let i = 0; i < vcards.length; i++) {
-        vcards[i].classList.remove("active");
-        if(i < StartPosition) vcards[i].style.transform = "translateX(-100vw)";
-        else if(i >= StartPosition + items) vcards[i].style.transform = "translateX(100vw)";
+    for(let i = 0; i < vcards.length; i++){
+        if(i < vcur){
+            vcards[i].style.transform = "translateX(-" +  (i + 1) * 100 + "vw)";
+        }else if (i < vcur + countOnPage){
+            vcards[i].style.transform = "translateX(-" + curW * (i - (i - vcur)) + "vw)";
+        }else{
+            vcards[i].style.transform = "translateX(" + (i - vcur - 1) * 100 + "vw)";
+        } 
     }
-    for(let i = StartPosition; i < StartPosition + items; i++){
-        vcards[i].classList.add("active");
-        vcards[i].style.transform = "none";
-    }
-
-    if(vpage == 1) vb1.classList.remove("active");
+    if(vcur == 0) vb1.classList.remove("active");
     else vb1.classList.add("active");
 
-    if(vpage == countPage) vb2.classList.remove("active");
+    if(vcur == vcards.length - countOnPage) vb2.classList.remove("active");
     else vb2.classList.add("active");
 }
 
 const CShow = function(){
-    let items = (countItems / countPage);
-    let StartPosition = (cpage - 1) * items;
-    for(let i = 0; i < ccards.length; i++) {
-        ccards[i].classList.remove("active");
-        if(i < StartPosition) ccards[i].style.transform = "translateX(-100vw)";
-        else if(i >= StartPosition + items) ccards[i].style.transform = "translateX(100vw)";
+    for(let i = 0; i < ccards.length; i++){
+        if(i < ccur){
+            ccards[i].style.transform = "translateX(-" +  (i + 1) * 100 + "vw)";
+        }else if (i < ccur + countOnPage){
+            ccards[i].style.transform = "translateX(-" + curW * (i - (i - ccur)) + "vw)";
+        }else{
+            ccards[i].style.transform = "translateX(" + (i - ccur - 1) * 100 + "vw)";
+        } 
     }
-    for(let i = StartPosition; i < StartPosition + items; i++){
-        ccards[i].classList.add("active");
-        ccards[i].style.transform = "none";
-    }
-        
-    if(cpage == 1) cb1.classList.remove("active");
+    if(ccur == 0) cb1.classList.remove("active");
     else cb1.classList.add("active");
 
-    if(cpage == countPage) cb2.classList.remove("active");
+    if(ccur == ccards.length - countOnPage) cb2.classList.remove("active");
     else cb2.classList.add("active");
 }
 
 const FShow = function(){
-    let items = (countItems / countPage);
-    let StartPosition = (fpage - 1) * items;
-    for(let i = 0; i < fcards.length; i++) {
-        fcards[i].classList.remove("active");
-        if(i < StartPosition) fcards[i].style.transform = "translateX(-100vw)";
-        else if(i >= StartPosition + items) fcards[i].style.transform = "translateX(100vw)";
+    for(let i = 0; i < fcards.length; i++){
+        if(i < fcur){
+            fcards[i].style.transform = "translateX(-" +  (i + 1) * 100 + "vw)";
+        }else if (i < fcur + countOnPage){
+            fcards[i].style.transform = "translateX(-" + curW * (i - (i - fcur)) + "vw)";
+        }else{
+            fcards[i].style.transform = "translateX(" + (i - fcur - 1) * 100 + "vw)";
+        } 
     }
-    
-    for(let i = StartPosition; i < StartPosition + items; i++){
-        fcards[i].classList.add("active");
-        fcards[i].style.transform = "none";
-    }
-    if(fpage == 1) fb1.classList.remove("active");
+    if(fcur == 0) fb1.classList.remove("active");
     else fb1.classList.add("active");
 
-    if(fpage == countPage) fb2.classList.remove("active");
+    if(fcur == fcards.length - countOnPage) fb2.classList.remove("active");
     else fb2.classList.add("active");
 }
 
 const F = function() { //about videos
     let mql = window.matchMedia("(orientation: portrait)");
 
-    if(mql.matches) {  
-        // Портретная ориентация
+    if(!mql.matches) {  
         countPage = 3;
+        countOnPage = 3;
+        curW = 28.5;
     } else {  
-        // Горизонтальная ориентация
         countPage = 2;
-        if(cpage > countPage) cpage--;
-        if(vpage > countPage) vpage--;
-        if(fpage > countPage) fpage--;
+        countOnPage = 2;
+        curW = 48;
     }
     VShow();
     CShow();
     FShow();
 }
 
-cb1.addEventListener('click', () => { if(cpage > 1) cpage -= 1; CShow();});
-cb2.addEventListener('click', () => { if(cpage < countPage) cpage += 1; CShow();});
+cb1.addEventListener('click', () => { if(ccur > 0) ccur--; CShow(); } );
+cb2.addEventListener('click', () => { if(ccur < ccards.length - countOnPage) ccur++; CShow(); } );
 
-vb1.addEventListener('click', () => { if(vpage > 1) vpage -= 1; VShow();});
-vb2.addEventListener('click', () => { if(vpage < countPage) vpage += 1; VShow();});
+vb1.addEventListener('click', () => { if(vcur > 0) vcur--; VShow(); });
+vb2.addEventListener('click', () => { if(vcur < vcards.length - countOnPage) vcur++; VShow(); });
 
-fb1.addEventListener('click', () => { if(fpage > 1) fpage -= 1; FShow();});
-fb2.addEventListener('click', () => { if(fpage < countPage) fpage += 1; FShow();});
+fb1.addEventListener('click', () => { if(fcur > 0) fcur--; FShow();});
+fb2.addEventListener('click', () => { if(fcur < fcards.length - countOnPage) fcur++; FShow(); });
 
 window.addEventListener('load', () => F());
 window.addEventListener("resize", () => F());
